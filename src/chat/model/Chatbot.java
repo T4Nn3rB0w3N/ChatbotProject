@@ -25,6 +25,7 @@ public class Chatbot
 		this.spookyList = spookyList;
 	}
 	
+	//------Getters
 	public ArrayList<String>  getResponseList()
 	{
 		return responseList;
@@ -49,4 +50,31 @@ public class Chatbot
 	{
 		return spookyList;
 	}
+	
+	//-------Setters
+	public void setResponseList(ArrayList<String> responseList)
+	{
+		this.responseList = responseList;
+	}
+	
+	public void setCurrentUser(String currentUser)
+	{
+		this.currentUser = currentUser;
+	}
+	
+	public void setJoke(String joke)
+	{
+		this.joke = joke;
+	}
+	
+	public void setContent(String content)
+	{
+		this.content = content;
+	}
+	
+	public void setSpookyList(ArrayList<String> spookyList)
+	{
+		this.spookyList = spookyList;
+	}
+	
 }
