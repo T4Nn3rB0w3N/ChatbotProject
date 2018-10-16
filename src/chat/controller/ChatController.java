@@ -7,7 +7,14 @@ import java.util.Scanner;
 
 public class ChatController
 {
+	private Chatbot simpleBot;
 	
+	
+	
+	public ChatController()
+	{
+		simpleBot = new Chatbot();
+	}
 	
 	public void start()
 	{
@@ -20,10 +27,7 @@ public class ChatController
 			}
 	}
 	
-	public ChatController()
-	{
-		
-	}
+	
 	
 	
 }
