@@ -33,6 +33,11 @@ public class Chatbot
 		responseList.add("No.");
 		responseList.add("I am literally a virtual machine that does not sustain a true intelligence.");
 		
+		spookyList.add("Halloween is better than Cashmas!");
+		spookyList.add("Jack Skellington!!!!");
+		spookyList.add("I like horror movies more than romances");
+		spookyList.add("I find it hilarious when little children fall down and hurt themselves.");
+		
 	}
 	
 	public Chatbot(ArrayList<String> responseList, String currentUser, String joke, String content, ArrayList<String> spookyList)
