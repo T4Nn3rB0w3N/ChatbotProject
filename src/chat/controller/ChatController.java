@@ -19,15 +19,24 @@ public class ChatController
 	public void start()
 	{
 		String userInput = "";
+		
 		while (!userInput.equalsIgnoreCase("quit"))
 			{
-				userInput = JOptionPane.showInputDialog(null, "type \"quit\" to exit");
-				//user will now know how to exit the chatbot
-				
+				userInput = interactWithChatbot(userInput);
+				//user will now know how to exit the chatbot	
 			}
 	}
 	
+	public String interactWithChatbot(String text)
+	{
+		String userInput = JOptionPane.showInputDialog(null, "Hi, what do you want to talk about today?");
+		String chatbotSays = simpleBot.processText(userInput);
+		return chatbotSays;
+	}
 	
-	
+	public String usecChatbotCheckers(String text)
+	{
+		
+	}
 	
 }

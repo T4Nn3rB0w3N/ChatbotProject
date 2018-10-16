@@ -40,6 +40,15 @@ public class Chatbot
 		
 	}
 	
+	public String processText(String userText)
+	{
+		String output = "";
+		
+		output += "You said: " + userText;
+		
+		return output;
+	}
+	
 	public Chatbot(ArrayList<String> responseList, String currentUser, String joke, String content, ArrayList<String> spookyList)
 	{
 		this.responseList = responseList;
