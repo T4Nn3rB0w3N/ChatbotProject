@@ -37,6 +37,8 @@ public class Chatbot
 		spookyList.add("Jack Skellington!!!!");
 		spookyList.add("I like horror movies more than romances");
 		spookyList.add("I find it hilarious when little children fall down and hurt themselves.");
+		spookyList.add("I feel like a ghost.");
+		spookyList.add("Halloween");
 		
 	}
 	

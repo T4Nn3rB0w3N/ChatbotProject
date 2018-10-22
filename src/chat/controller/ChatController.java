@@ -34,9 +34,13 @@ public class ChatController
 		return chatbotSays;
 	}
 	
-	public String usecChatbotCheckers(String text)
+	public String useChatbotCheckers(String text)
 	{
-		
+		return null;
+		// return boolean;
 	}
-	
+	public getChatbot()
+	{
+		return Chatbot;
+	}
 }
