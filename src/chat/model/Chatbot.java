@@ -21,10 +21,10 @@ public class Chatbot
 		this.responseList = new ArrayList<String>();
 		this.spookyList = new ArrayList<String>();
 		
-		buildTheLists();
+		buildLists();
 	}
 	
-	private void buildTheLists()
+	private void buildLists()
 	{
 		responseList.add("Hello! How do you do?");
 		responseList.add("Goodbye - no more talking for you!");
