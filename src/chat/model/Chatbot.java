@@ -32,6 +32,7 @@ public class Chatbot
 		responseList.add("Yes.");
 		responseList.add("No.");
 		responseList.add("I am literally a virtual machine that does not sustain a true intelligence.");
+		responseList.add("Hello");
 		
 		spookyList.add("Halloween is better than Cashmas!");
 		spookyList.add("Jack Skellington!!!!");
@@ -42,11 +43,11 @@ public class Chatbot
 		
 	}
 	
-	public String processText(String userText)
+	public String processText(String input)
 	{
 		String output = "";
 		
-		output += "You said: " + userText;
+		output += "You said: " + input;
 		
 		return output;
 	}
@@ -58,6 +59,49 @@ public class Chatbot
 		this.joke = joke;
 		this.content = content;
 		this.spookyList = spookyList;
+	}
+	
+	public boolean legitimacyChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input == null)
+		{
+			isValid = false;
+		}
+		
+		else if(input.length() < 2)
+		{
+			isValid = false;
+		}
+		
+		//else if(input.equals(""))
+		//{
+			//isValid = false;
+		//}
+		
+		else if(input.contains("dfg") || input.contains("cvb"))
+		{
+			isValid = false;
+		}
+	
+		//else if(input.equals("asdfghjkl"))
+		//{
+		//	isValid = false;
+		//}
+		return isValid;
+	}
+	
+	public boolean spookyChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input.equals("Halloween"))
+		{
+			isValid = true;
+		}
+		
+		else if()
 	}
 	
 	//------Getters
