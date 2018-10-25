@@ -61,6 +61,7 @@ public class Chatbot
 		this.spookyList = spookyList;
 	}
 	
+	//------LEGITIMACY TEST---------------
 	public boolean legitimacyChecker(String input)
 	{
 		boolean isValid = true;
@@ -92,6 +93,7 @@ public class Chatbot
 		return isValid;
 	}
 	
+	// ----------SPOOKY TEST--------------
 	public boolean spookyChecker(String input)
 	{
 		boolean isValid = true;
@@ -101,7 +103,49 @@ public class Chatbot
 			isValid = true;
 		}
 		
-		else if()
+		else if(input.equals(spookyList))
+		{
+			isValid = true;
+		}
+		
+		else if(input.equals("Easter"))
+		{
+			isValid = false;
+		}
+		
+		return isValid;
+	}
+	//-----------CONTENT TEST------------------
+	public boolean contentChecker(String input)
+	{
+		boolean isValid = true;
+		
+		if(input.equals(content))
+		{
+			isValid = true;
+		}
+		
+		else if(input.equals("text" + content + "text"))
+		{
+			isValid = false;
+		}
+		
+		else if(input.equals("text" + content))
+		{
+			isValid = false;
+		}
+		
+		else if(input.equals(content + "text"))
+		{
+			isValid = false;
+		}
+		
+		else if(input.equals(processText(content).contains("You said the special words")))
+		{
+			isValid = true;
+		}
+		
+		return isValid;
 	}
 	
 	//------Getters
