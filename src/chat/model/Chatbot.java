@@ -153,7 +153,7 @@ public class Chatbot
 			isValid = false;
 		}
 		
-		else if(input.equals(processText(content).contains("You said the special words")))
+		else if(input.equals(processText(input)))
 		{
 			isValid = true;
 		}
