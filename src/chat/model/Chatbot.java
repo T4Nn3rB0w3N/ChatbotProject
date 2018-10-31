@@ -98,7 +98,7 @@ public class Chatbot
 	{
 		boolean isValid = true;
 		
-		if(input.equals("Halloween"))
+		if(input.contains("Halloween"))
 		{
 			isValid = true;
 		}
@@ -112,20 +112,20 @@ public class Chatbot
 			}
 		}
 		
-		
-		
 //		else if(input.equals(spookyList))
 //		{
 //			isValid = true;
 //		}
 		
-		if(input.equals("Easter"))
+		if(input.contains("Easter"))
 		{
 			isValid = false;
 		}
 		
 		return isValid;
 	}
+	
+	
 	//-----------CONTENT TEST------------------
 	public boolean contentChecker(String input)
 	{
