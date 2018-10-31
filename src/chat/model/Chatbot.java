@@ -103,12 +103,23 @@ public class Chatbot
 			isValid = true;
 		}
 		
-		else if(input.equals(spookyList))
+		for(String phrase : spookyList)
 		{
-			isValid = true;
+			if(input.contains(phrase))
+			{
+				isValid = true;
+				//Was helped by Brian's code with this test
+			}
 		}
 		
-		else if(input.equals("Easter"))
+		
+		
+//		else if(input.equals(spookyList))
+//		{
+//			isValid = true;
+//		}
+		
+		if(input.equals("Easter"))
 		{
 			isValid = false;
 		}
