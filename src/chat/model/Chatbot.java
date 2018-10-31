@@ -161,6 +161,12 @@ public class Chatbot
 		return isValid;
 	}
 	
+	//CHATBOT STRING TEST---------------
+	public boolean chatbotString()
+	{
+		
+	}
+	
 	//------Getters
 	public ArrayList<String>  getResponseList()
 	{
