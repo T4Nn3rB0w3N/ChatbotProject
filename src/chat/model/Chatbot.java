@@ -24,6 +24,7 @@ public class Chatbot
 		buildLists();
 	}
 	
+	
 	private void buildLists()
 	{
 		responseList.add("Hello! How do you do?");
@@ -45,10 +46,11 @@ public class Chatbot
 	
 	public String processText(String input)
 	{
+		String sampleText = "";
 		String output = "";
 		
 		output += "You said: " + input;
-		
+		output += "Chatbot says: " +  sampleText;
 		return output;
 	}
 	
