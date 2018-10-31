@@ -27,6 +27,7 @@ public class Chatbot
 	
 	private void buildLists()
 	{
+		//need more than 15 responses in responseList
 		responseList.add("Hello! How do you do?");
 		responseList.add("Goodbye - no more talking for you!");
 		responseList.add("I am a chatbot. Would you like to talk to me?");
