@@ -53,7 +53,7 @@ public class ChabotTest
 	@Test
 	public void testChatbotString()
 	{
-		testedBot = new Chatbot();
+		testedBot = new Chatbot("sample content");
 		assertTrue("String constructor needs to assign to the content variable", testedBot.getContent().equals("sample content"));
 	}
 
