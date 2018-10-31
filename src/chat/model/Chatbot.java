@@ -41,6 +41,9 @@ public class Chatbot
 		spookyList.add("I find it hilarious when little children fall down and hurt themselves.");
 		spookyList.add("I feel like a ghost.");
 		spookyList.add("Halloween");
+		spookyList.add("I'm feeling hungry for blood");
+		spookyList.add("graveyard smash");
+		spookyList.add("There's a skeleton in my closet");
 		
 	}
 	
