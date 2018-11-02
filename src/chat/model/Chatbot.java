@@ -34,7 +34,16 @@ public class Chatbot
 		responseList.add("Yes.");
 		responseList.add("No.");
 		responseList.add("I am literally a virtual machine that does not sustain a true intelligence.");
-		responseList.add("Hello");
+		responseList.add("Hello.");
+		responseList.add("Maybe.");
+		responseList.add("I don't have an answer for that.");
+		responseList.add("Do you have a brain? Of course I'm a chatbot!");
+		responseList.add("I don't like your tone.");
+		responseList.add("What do YOU think?");
+		responseList.add("I think that you should solve your own problems, not bring them to me.");
+		responseList.add("Do I look like a therapist to you?!");
+		responseList.add("I'm not being mean. I'm being honest.");
+		responseList.add("Thanks for the compliment.");
 		
 		spookyList.add("Halloween is better than Cashmas!");
 		spookyList.add("Jack Skellington!!!!");
@@ -55,6 +64,12 @@ public class Chatbot
 		
 		output += "You said: " + input;
 		output += "Chatbot says: " +  sampleText;
+		
+		if(input.equals(getContent()))
+		{
+			output += "You said the special words";
+		}
+		
 		return output;
 	}
 	
@@ -157,7 +172,7 @@ public class Chatbot
 			isValid = false;
 		}
 		
-		else if(input.equals(processText(input)))
+		else if(processText(getContent()).contains("You said the special words"))
 		{
 			isValid = true;
 		}
