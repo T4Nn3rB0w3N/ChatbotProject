@@ -65,9 +65,9 @@ public class Chatbot
 		output += "You said: " + input;
 		output += "Chatbot says: " +  sampleText;
 		
-		if(input.equals(getContent()))
+		if(contentChecker(input))
 		{
-			output += "You said the special words";
+			output += "You said the special words.\n";
 		}
 		
 		return output;
@@ -150,7 +150,7 @@ public class Chatbot
 	//-----------CONTENT TEST------------------
 	public boolean contentChecker(String input)
 	{
-		boolean isValid = true;
+		boolean isValid = false;
 		
 		if(input.equals(content))
 		{
