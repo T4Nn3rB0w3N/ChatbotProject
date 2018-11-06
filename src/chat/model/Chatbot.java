@@ -24,7 +24,6 @@ public class Chatbot
 		buildLists();
 	}
 	
-	
 	private void buildLists()
 	{
 		//need more than 15 responses in responseList
@@ -80,6 +79,11 @@ public class Chatbot
 		this.joke = joke;
 		this.content = content;
 		this.spookyList = spookyList;
+	}
+	
+	public Chatbot(String content)
+	{
+		this.content = content;
 	}
 	
 	//------LEGITIMACY TEST---------------
@@ -152,6 +156,11 @@ public class Chatbot
 	{
 		boolean isValid = false;
 		
+		if(input == null) 
+		{
+			return isValid;
+		}
+		
 		if(input.equals(content))
 		{
 			isValid = true;
@@ -181,10 +190,18 @@ public class Chatbot
 	}
 	
 	//CHATBOT STRING TEST---------------
-	public boolean chatbotString()
-	{
-		
-	}
+////	public boolean chatbotString(String content)
+//	{
+//		  Chatbot() = new Chatbot("sample content");
+//		
+//		boolean isValid = true;
+//		
+//		if(getContent().equals("sample content"))
+//		{
+//			isValid = true;
+//		}
+//		return isValid;
+//	}
 	
 	//------Getters
 	public ArrayList<String>  getResponseList()

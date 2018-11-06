@@ -32,6 +32,10 @@ public class ChatController
 		String output = "";
 		String userInput = JOptionPane.showInputDialog(null, "Hi, what do you want to talk about today?");
 		output = simpleBot.processText(userInput);
+		if(text == null)
+		{
+			output.toLowerCase().contains("null");
+		}
 		return output;
 	}
 	
@@ -40,8 +44,8 @@ public class ChatController
 		return null;
 		// return boolean;
 	}
-	public getChatbot()
+	public Chatbot getChatbot()
 	{
-		return Chatbot;
+		return simpleBot;
 	}
 }
