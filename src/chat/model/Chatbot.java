@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Chatbot
 {
-	//------data members
+	//------DATA MEMBERS---------------
 	private ArrayList<String> responseList;
 	private String currentUser;
 	private String joke;
 	private String content;
 	private ArrayList<String> spookyList;
 	
+	//-----------ASSESSED BY CHATBOT TEST---------------
 	public Chatbot()
 	{
 		this.joke = "Knock, Knock. Who's there? Boo. Boo who? Boo-hoo-hoo :'(  XD";
@@ -24,9 +25,10 @@ public class Chatbot
 		buildLists();
 	}
 	
+	//-------ASSESSED BY BUILD LISTS TEST-----------
 	private void buildLists()
 	{
-		//need more than 15 responses in responseList
+		//-----ASSESSED BY RESPONSE LIST TEST--------
 		responseList.add("Hello! How do you do?");
 		responseList.add("Goodbye - no more talking for you!");
 		responseList.add("I am a chatbot. Would you like to talk to me?");
@@ -44,6 +46,7 @@ public class Chatbot
 		responseList.add("I'm not being mean. I'm being honest.");
 		responseList.add("Thanks for the compliment.");
 		
+		//------ASSESSED BY SPOOKY LIST TEST--------------
 		spookyList.add("Halloween is better than Cashmas!");
 		spookyList.add("Jack Skellington!!!!");
 		spookyList.add("I like horror movies more than romances");
@@ -56,6 +59,7 @@ public class Chatbot
 		
 	}
 	
+	//--------ASSESSED BY PROCESS TEXT TEST----------
 	public String processText(String input)
 	{
 		String sampleText = "";
@@ -81,12 +85,13 @@ public class Chatbot
 		this.spookyList = spookyList;
 	}
 	
+	//------ASSESSED BY CHATBOT STRING TEST------------
 	public Chatbot(String content)
 	{
 		this.content = content;
 	}
 	
-	//------LEGITIMACY TEST---------------
+	//------ASSESSED BY LEGITIMACY TEST---------------
 	public boolean legitimacyChecker(String input)
 	{
 		boolean isValid = true;
@@ -118,7 +123,7 @@ public class Chatbot
 		return isValid;
 	}
 	
-	// ----------SPOOKY TEST--------------
+	// ----------ASSESSED BY SPOOKY TEST--------------
 	public boolean spookyChecker(String input)
 	{
 		boolean isValid = true;
@@ -151,7 +156,7 @@ public class Chatbot
 	}
 	
 	
-	//-----------CONTENT TEST------------------
+	//-----------ASSESSED BY CONTENT TEST------------------
 	public boolean contentChecker(String input)
 	{
 		boolean isValid = false;
@@ -203,7 +208,7 @@ public class Chatbot
 //		return isValid;
 //	}
 	
-	//------Getters
+	//------GETTERS--------
 	public ArrayList<String>  getResponseList()
 	{
 		return responseList;
@@ -230,7 +235,7 @@ public class Chatbot
 	}
 	
 	
-	//-------Setters
+	//-------SETTERS--------
 	public void setResponseList(ArrayList<String> responseList)
 	{
 		this.responseList = responseList;
