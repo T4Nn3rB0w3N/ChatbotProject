@@ -62,11 +62,15 @@ public class Chatbot
 	//--------ASSESSED BY PROCESS TEXT TEST----------
 	public String processText(String input)
 	{
-		String sampleText = "";
 		String output = "";
 		
+		int randomIndex = (int) (Math.random() * responseList.size());
+		
 		output += "You said: " + input;
-		output += "Chatbot says: " +  sampleText;
+		output += "Chatbot says: " +  randomIndex;
+		
+		
+		
 		
 		if(contentChecker(input))
 		{
