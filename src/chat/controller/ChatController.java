@@ -2,7 +2,6 @@ package chat.controller;
 
 import chat.model.Chatbot;
 import javax.swing.JOptionPane;
-import java.util.Scanner;
 
 
 public class ChatController
