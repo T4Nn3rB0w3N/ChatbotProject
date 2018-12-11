@@ -12,10 +12,11 @@ public class IOController
 	{
 		try
 		{
-			//Saves the date
+			//Saves the date & time
 			String filename = path;
 			Calendar date = Calendar.getInstance();
 			filename += "/" + date.get(Calendar.MONTH) + " " + date.get(Calendar.DAY_OF_MONTH);
+			filename += " at " + date.get(Calendar.HOUR)+ "-" + date.get(Calendar.MINUTE); 
 			filename += " chatbot save.txt";
 			
 			//Saves the text
