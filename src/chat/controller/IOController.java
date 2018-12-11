@@ -12,21 +12,25 @@ public class IOController
 	{
 		try
 		{
+			//Saves the date
 			String filename = path;
 			Calendar date = Calendar.getInstance();
 			filename += "/" + date.get(Calendar.MONTH) + " " + date.get(Calendar.DAY_OF_MONTH);
 			filename += " chatbot save.txt";
 			
+			//Saves the text
 			File saveFile = new File(filename);
 			Scanner textScanner = new Scanner(textToSave);
 			PrintWriter saveText = new PrintWriter(saveFile);
 			
+			//Scans the text and prints it in the save file
 			while(textScanner.hasNext())
 			{
 				String currentLine = textScanner.nextLine();
 				saveText.println(currentLine);
 			}
 			
+			//Closing of scanner and saved text
 			textScanner.close();
 			saveText.close();
 			
