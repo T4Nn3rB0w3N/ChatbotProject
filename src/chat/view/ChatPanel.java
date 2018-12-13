@@ -26,7 +26,6 @@ public class ChatPanel extends JPanel
 		setupPanel();
 		setupLayout();
 		setupListeners();
-		getPath();
 	}
 	
 
@@ -99,7 +98,7 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String chatText = chatArea.getText();
-				String path = ".";
+				String path = getPath("save");
 				IOController.saveText(appController, path, chatText);
 				chatArea.setText("Chat saved!");
 			}
@@ -109,7 +108,9 @@ public class ChatPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				String path = getPath("load");
+				String chatText = IOController.loadFile(appController,  path);
+				chatArea.setText(chatText);
 			}
 		});
 		
