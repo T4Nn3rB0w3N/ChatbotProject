@@ -109,7 +109,7 @@ public class ChatPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				String path = getPath("load");
-				String chatText = IOController.loadFile(appController,  path);
+				String chatText = IOController.loadFile(appController, path);
 				chatArea.setText(chatText);
 			}
 		});
