@@ -1,5 +1,7 @@
 package chat.view;
 
+import java.io.File;
+
 import javax.swing.*;
 import chat.controller.ChatController;
 import chat.controller.IOController;
@@ -19,18 +21,49 @@ public class ChatPanel extends JPanel
 		super();
 		this.appController = appController;
 		
-		
+	
 		
 		setupPanel();
 		setupLayout();
 		setupListeners();
+		getPath();
 	}
+	
 
 	private void setupPanel()
 	{
+		this.add(chatButton);
+		this.add(resetButton);
+		this.add(saveButton);
+		this.add(loadButton);
+		this.add(checkerButton);
+		this.add(chatField);
+	}
+	
+	private String getPath(String choice)
+	{
+		String path = ".";
+		int result = -99;
+		JFileChooser fileChooser = new JFileChooser();
+		if (choice.equals("save"))
+		{
+			fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			result = fileChooser.showSaveDialog(this);
+			if(result == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getCurrentDirectory().getAbsolutePath();
+			}
+		}
+		else
+		{
+			result = fileChooser.showOpenDialog(this);
+			if(result == JFileChooser.APPROVE_OPTION)
+			{
+				path = fileChooser.getSelectedFile().getAbsolutePath();
+			}
+		}
 		
-		
-		
+		return path;
 	}
 	
 	private void setupLayout()
