@@ -64,9 +64,25 @@ public class IOController
 				fileScanner.close();
 			}
 		}
-		catch(IOException)
+		catch(IOException error)
 		{
-			
+			app.handleErrors(error);
 		}
+		catch(Exception genericError)
+		{
+			app.handleErrors(genericError);
+		}
+		return contents;
 	}
+	public static void saveTextWithResources(ChatController app, String path, String textToSave)
+	{
+		
+	}
+	
+	public static void saveTextBinary(ChatController app, String path, String textToSave)
+	{
+		
+	}
+	
+	public static String loadFileBinary(ChatController)
 }

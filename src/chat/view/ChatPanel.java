@@ -59,6 +59,7 @@ public class ChatPanel extends JPanel
 			if(result == JFileChooser.APPROVE_OPTION)
 			{
 				path = fileChooser.getSelectedFile().getAbsolutePath();
+				// absolute path is the exact path, relative path is where you give directions using landmarks
 			}
 		}
 		
