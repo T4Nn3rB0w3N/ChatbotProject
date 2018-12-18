@@ -84,5 +84,8 @@ public class IOController
 		
 	}
 	
-	public static String loadFileBinary(ChatController)
+	public static String loadFileBinary(ChatController app)
+	{
+		
+	}
 }
