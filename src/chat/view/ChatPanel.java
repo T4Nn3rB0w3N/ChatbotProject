@@ -37,8 +37,16 @@ public class ChatPanel extends JPanel
 		resetButton = new JButton("Reset");
 		saveButton = new JButton("Save");
 		loadButton = new JButton("Load");
+		checkerButton = new JButton("Check Text");
+		tweetButton = new JButton("Send Tweet");
+		searchTwitterButton = new JButton();
+		
 		
 		buttonPanel = new JPanel(new GridLayout(1, 0));
+		
+		chatField = new JTextField("Talk to the bot here", 50);
+		chatArea = new JTextArea("Chat Area", 20, 50);
+		chatPane = new JScrollPane();
 		
 		setupButtons();
 		setupScrollPane();
