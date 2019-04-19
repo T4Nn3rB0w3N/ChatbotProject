@@ -38,13 +38,24 @@ public class ChatPanel extends JPanel
 		saveButton = new JButton("Save");
 		loadButton = new JButton("Load");
 		
-	
+		buttonPanel = new JPanel(new GridLayout(1, 0));
 		
+		setupButtons();
+		setupScrollPane();
 		setupPanel();
 		setupLayout();
 		setupListeners();
 	}
 	
+	private void setupButtons()
+	{
+		buttonPanel.add(saveButton);
+		buttonPanel.add(loadButton);
+		buttonPanel.add(chatButton);
+		buttonPanel.add(checkerButton);
+		buttonPanel.add(tweetButton);
+		buttonPanel.add(searchTwitterButton);
+	}
 
 	private void setupScrollPane()
 	{
