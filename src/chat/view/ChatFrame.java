@@ -5,15 +5,15 @@ import chat.controller.ChatController;
 
 public class ChatFrame extends JFrame
 {
-	private ChatController theController;
+	private ChatController app;
 	private ChatPanel thePanel;
 	
-	public ChatFrame(ChatController theController)
+	public ChatFrame(ChatController app)
 	{
 		super();
 		
-		this.theController = theController;
-		this.thePanel = thePanel;
+		this.app = app;
+		this.thePanel =  new ChatPanel(app);
 		
 		setupFrame();
 	}
@@ -21,7 +21,7 @@ public class ChatFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setContentPane(thePanel);
-		this.setSize(1000, 500);
+		this.setSize(1024, 768);
 		this.setTitle("ChatBot Frame");
 		this.setResizable(false);
 		this.setVisible(true);

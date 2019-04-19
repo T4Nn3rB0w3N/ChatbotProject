@@ -5,21 +5,38 @@ import java.io.File;
 import javax.swing.*;
 import chat.controller.ChatController;
 import chat.controller.IOController;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.GridLayout;
 
 
 public class ChatPanel extends JPanel
 {
 	private ChatController appController;
+	private SpringLayout appLayout;
 	private JButton chatButton;
 	private JButton resetButton;
 	private JButton saveButton;
 	private JButton loadButton;
 	private JButton checkerButton;
+	private JButton tweetButton;
+	private JButton searchTwitterButton;
+	private JTextField chatField;
+	private JTextArea chatArea;
+	private JScrollPane chatPane;
+	private JPanel buttonPanel;
+	
 	
 	public ChatPanel(ChatController appController)
 	{
 		super();
 		this.appController = appController;
+		appLayout = new SpringLayout();
+		
+		chatButton = new JButton("Save");
+		resetButton = new JButton("Reset");
+		saveButton = new JButton("Save");
+		loadButton = new JButton("Load");
 		
 	
 		
@@ -29,13 +46,27 @@ public class ChatPanel extends JPanel
 	}
 	
 
+	private void setupScrollPane()
+	{
+		chatArea.setEditable(false);
+		chatArea.setLineWrap(true);
+		chatArea.setWrapStyleWord(true);
+	}
+	
 	private void setupPanel()
 	{
+		this.setLayout(appLayout);
+		this.setPreferredSize(new Dimension(1024, 768));
+		buttonPanel.setPreferredSize(new Dimension(900, 150));
+		buttonPanel.setBackground(Color.CYAN);
+		this.setBackground(Color.MAGENTA);
 		this.add(chatButton);
 		this.add(resetButton);
 		this.add(saveButton);
 		this.add(loadButton);
 		this.add(checkerButton);
+		this.add(tweetButton);
+		this.add(searchTwitterButton);
 		this.add(chatField);
 	}
 	
