@@ -21,26 +21,41 @@ public class ChatPanel extends JPanel
 	private JButton checkerButton;
 	private JButton tweetButton;
 	private JButton searchTwitterButton;
+	
+	private ImageIcon saveIcon;
+	private ImageIcon loadIcon;
+	private ImageIcon chatIcon;
+	private ImageIcon tweetIcon;
+	private ImageIcon checkerIcon;
+	private ImageIcon searchIcon;
+	
 	private JTextField chatField;
 	private JTextArea chatArea;
 	private JScrollPane chatPane;
 	private JPanel buttonPanel;
 	
 	
+	
 	public ChatPanel(ChatController appController)
 	{
 		super();
+		
 		this.appController = appController;
 		appLayout = new SpringLayout();
 		
-		chatButton = new JButton("Save");
-		resetButton = new JButton("Reset");
-		saveButton = new JButton("Save");
-		loadButton = new JButton("Load");
-		checkerButton = new JButton("Check Text");
-		tweetButton = new JButton("Send Tweet");
-		searchTwitterButton = new JButton();
+		saveIcon = new ImageIcon(getClass().getResource("/chat/view/images/save.png"));
+		loadIcon = new ImageIcon(getClass().getResource("/chat/view/images/load.png"));
+		chatIcon = new ImageIcon(getClass().getResource("/chat/view/images/chat.png"));
+		tweetIcon = new ImageIcon(getClass().getResource("/chat/view/images/tweet.png"));
+		checkerIcon = new ImageIcon(getClass().getResource("/chat/view/images/check.png"));
+		searchIcon = new ImageIcon(getClass().getResource("/chat/view/images/searchTwitter.png"));
 		
+		chatButton = new JButton("Chat", chatIcon);
+		saveButton = new JButton("Save", saveIcon);
+		loadButton = new JButton("Load", loadIcon);
+		checkerButton = new JButton("Check Text", checkerIcon);
+		tweetButton = new JButton("Send Tweet", tweetIcon);
+		searchTwitterButton = new JButton("Search Twitter", searchIcon);
 		
 		buttonPanel = new JPanel(new GridLayout(1, 0));
 		
