@@ -1,5 +1,6 @@
 package chat.model;
 
+import chat.controller.ChatController;
 import java.util.Scanner;
 import java.util.List;
 import java.util.Map;
@@ -21,10 +22,14 @@ import chat.controller.IOController;
 
 public class ChatTwitter
 {
+	private ChatController app;
+	private Twitter chatTwitter;
 	private List<Status> searchedTweets;
 	private List<String> tweetedWords;
 	private long totalWordCount;
 	private HashMap<String, Integer> wordsAndCount;
+	
+	private String tweetEnd;
 	
 	public ChatTwitter()
 	{
